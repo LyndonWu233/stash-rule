@@ -86,7 +86,7 @@ proxy-groups:
   type: select
   use:
     - CustomProxy
-  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Proxy.png
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
 
 #节点自动选择延时低
 #- name: Auto-HK
@@ -97,19 +97,19 @@ proxy-groups:
 
 - name: 香港节点
   type: select
-  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Hong_Kong.png
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
   use:
     - CustomProxy-HK
   
 - name: 台湾节点
   type: select
-  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Taiwan.png
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
   use:
     - CustomProxy-TW
   
 - name: 新加坡节点
   type: select
-  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Singapore.png
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
   use:
     - CustomProxy-SG
 
@@ -121,7 +121,7 @@ proxy-groups:
   - SG
   - 节点选择
   - DIRECT
-  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Global.png
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
 
 - name: Netflix
   type: select
@@ -130,7 +130,7 @@ proxy-groups:
   - TW
   - SG
   - 节点选择
-  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Netflix.png
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
 
 - name: Disney+
   type: select
@@ -139,7 +139,7 @@ proxy-groups:
   - TW
   - SG
   - 节点选择
-  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Disney+.png
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney+.png
 
 - name: Youtube
   type: select
@@ -148,7 +148,7 @@ proxy-groups:
   - TW
   - SG
   - 节点选择
-  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/YouTube.png
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
 
 - name: Spotify
   type: select
@@ -158,7 +158,7 @@ proxy-groups:
   - SG
   - 节点选择
   - DIRECT
-  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Spotify.png
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
 
 - name: Bilibili
   type: select
@@ -166,7 +166,7 @@ proxy-groups:
   - HK
   - TW
   - DIRECT
-  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/bilibili.png
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili.png
 
 - name: Telegram
   type: select
@@ -175,7 +175,7 @@ proxy-groups:
   - TW
   - SG
   - 节点选择
-  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Telegram.png
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
 
 - name: Twitter
   type: select
@@ -184,7 +184,7 @@ proxy-groups:
   - TW
   - SG
   - 节点选择
-  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Twitter.png
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
 
 - name: Speedtest
   type: select
@@ -194,7 +194,7 @@ proxy-groups:
   - SG
   - 节点选择
   - DIRECT
-  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Speedtest.png
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Speedtest.png
 
 - name: Apple
   type: select
@@ -204,7 +204,7 @@ proxy-groups:
   - SG
   - 节点选择
   - DIRECT
-  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Apple.png
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
 
 - name: Google
   type: select
@@ -214,7 +214,7 @@ proxy-groups:
   - SG
   - 节点选择
   - DIRECT
-  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Google.png
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google.png
 
 - name: Microsoft
   type: select
@@ -224,7 +224,7 @@ proxy-groups:
   - SG
   - 节点选择
   - DIRECT
-  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Microsoft.png
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
 
 - name: Instagram
   type: select
@@ -234,7 +234,7 @@ proxy-groups:
   - SG
   - 节点选择
   - DIRECT
-  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Instagram.png
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Instagram.png
 
 - name: Facebook
   type: select
@@ -244,7 +244,7 @@ proxy-groups:
   - SG
   - 节点选择
   - DIRECT
-  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Facebook.png
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Facebook.png
 
 - name: Line
   type: select
@@ -254,7 +254,7 @@ proxy-groups:
   - SG
   - 节点选择
   - DIRECT
-  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Line.png
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Line.png
 
 - name: OneDrive
   type: select
@@ -264,7 +264,7 @@ proxy-groups:
   - SG
   - 节点选择
   - DIRECT
-  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/OneDrive.png
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/OneDrive.png
 
 - name: GitHub
   type: select
@@ -274,7 +274,7 @@ proxy-groups:
   - SG
   - 节点选择
   - DIRECT
-  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/GitHub.png
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png
 
 - name: GlobalMedia
   type: select
@@ -284,7 +284,7 @@ proxy-groups:
   - SG
   - 节点选择
   - DIRECT
-  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/GlobalMedia.png
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GlobalMedia.png
 
 - name: GlobalProxy
   type: select
@@ -294,7 +294,7 @@ proxy-groups:
   - SG
   - 节点选择
   - DIRECT
-  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Qure.png
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Qure.png
 
 - name: Final
   type: select
@@ -304,7 +304,7 @@ proxy-groups:
   - SG
   - 节点选择
   - DIRECT
-  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Final.png
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
 
 
 #远程规则集合声明
