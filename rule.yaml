@@ -15,7 +15,7 @@ external-controller: 127.0.0.1:9090
 #DNS设置   
 dns:
   enable: true
-	listen: 0.0.0.0:53
+  listen: 0.0.0.0:53
   # 以下填写的 DNS 服务器将会被用来解析 DNS 服务的域名
   # 仅填写 DNS 服务器的 IP 地址
   default-nameserver:
@@ -24,7 +24,7 @@ dns:
   # 支持 UDP / TCP / DoT / DoH / DoQ 协议的 DNS 服务，可以指明具体的连接端口号。
   # 所有 DNS 请求将会直接发送到服务器，不经过任何代理。
   # Stash 会使用最先获得的解析记录回复 DNS 请求
-	# 相关系统负担参考 https://stash.wiki/faq/effective-stash
+  # 相关系统负担参考 https://stash.wiki/faq/effective-stash
   nameserver:
     # 不建议配置超过 2 个 DNS 服务器，会增加系统功耗
     - https://doh.pub/dns-query
@@ -63,7 +63,7 @@ proxy-providers:
       enable: true
       interval: 3600
       url: http://www.gstatic.com/generate_204
-			
+
   #香港节点
   CustomProxy-HK:
     <<: *CustomProxy #引用锚点内容
@@ -424,43 +424,43 @@ rule-providers:
     name: GlobleDirect
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml
 
-  GlobleDirect-rules:
+  GlobleDirect-rules1:
     behavior: classical
     interval: 86400
     name: GlobleDirect
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Download/Download.yaml
 
-  GlobleDirect-rules:
+  GlobleDirect-rules2:
     behavior: ipcidr
     interval: 86400
     name: GlobleDirect
     url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
 
-	GlobleDirect-rules:
+  GlobleDirect-rules3:
     behavior: classical
     interval: 86400
     name: GlobleDirect
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMedia/ChinaMedia.yaml
 
-	GlobleDirect-rules:
+  GlobleDirect-rules4:
     behavior: domain
     interval: 86400
     name: GlobleDirect
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMaxNoIP/ChinaMaxNoIP_Domain.txt
 
-	GlobleDirect-rules:
+  GlobleDirect-rules5:
     behavior: domain
     interval: 86400
     name: GlobleDirect
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China_Domain.txt
 
-	GlobleDirect-rules:
+  GlobleDirect-rules6:
     behavior: ipcidr
     interval: 86400
     name: GlobleDirect
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaIPsBGP/ChinaIPsBGP_IP.yaml
 
-	GlobleDirect-rules:
+  GlobleDirect-rules7:
     behavior: ipcidr
     interval: 86400
     name: GlobleDirect
@@ -488,5 +488,12 @@ rules:
 - RULE-SET,GlobalMedia-rules,GlobalMedia
 - RULE-SET,GlobalProxy-rules,GlobalProxy
 - RULE-SET,GlobleDirect-rules,DIRECT
+- RULE-SET,GlobleDirect-rules1,DIRECT
+- RULE-SET,GlobleDirect-rules2,DIRECT
+- RULE-SET,GlobleDirect-rules3,DIRECT
+- RULE-SET,GlobleDirect-rules4,DIRECT
+- RULE-SET,GlobleDirect-rules5,DIRECT
+- RULE-SET,GlobleDirect-rules6,DIRECT
+- RULE-SET,GlobleDirect-rules7,DIRECT
 - GEOIP,CN,DIRECT
 - MATCH,Final
