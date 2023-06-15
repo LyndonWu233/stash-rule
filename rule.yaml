@@ -95,19 +95,19 @@ proxy-groups:
 #  use:
 #    - MyProxy-HK
 
-- name: 香港节点
+- name: HK
   type: select
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
   use:
     - CustomProxy-HK
   
-- name: 台湾节点
+- name: TW
   type: select
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
   use:
     - CustomProxy-TW
   
-- name: 新加坡节点
+- name: SG
   type: select
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
   use:
