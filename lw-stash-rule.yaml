@@ -4,18 +4,12 @@
 # 再次进入副本编辑，下拉找到 #远程订阅（代理集合）的部分，使用机场订阅链接（Stash / Clash Premium / Clash 的订阅链接。其他类型不用试了，不可以），替换 url的范例链接
 # 保存即可
 
-# mixed-port: 7890
-# allow-lan: true
-# bind-address: '*'
-
 # 规则模式：rule（规则） / global（全局代理）/ direct（全局直连）
 mode: rule
 
 # 设置日志输出级别 (默认级别：silent，即不输出任何内容，以避免因日志内容过大而导致程序内存溢出）。
 # 5 个级别：silent / info / warning / error / debug。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
 log-level: silent
-
-# external-controller: 127.0.0.1:9090
 
 # DNS 服务器配置
 dns:
@@ -35,9 +29,6 @@ dns:
 
   # 跳过证书验证，解决部分兼容性问题 https://help.nextdns.io/t/g9hdkjz
   skip-cert-verify: true
-
-  # enhanced-mode: fake-ip
-  # fake-ip-range: 198.18.0.1/16
 
   # 在以下列表的域名将不会被解析为 fake ip，这些域名相关的解析请求将会返回它们真实的 IP 地址
   fake-ip-filter:
@@ -68,9 +59,6 @@ dns:
  
     # Bilibili CDN
     - '*.mcdn.bilivideo.cn'
-
-#本地代理
-# proxies:
 
 #远程订阅(代理集合)
 proxy-providers:
@@ -303,7 +291,7 @@ proxy-groups:
   - SG
   - 节点选择
   - DIRECT
-  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GlobalMedia.png
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ForeignMedia.png
 
 - name: GlobalProxy
   type: select
@@ -315,7 +303,7 @@ proxy-groups:
   - DIRECT
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Qure.png
 
-- name: Final
+- name: Final #漏网之鱼
   type: select
   proxies:
   - HK
@@ -329,160 +317,134 @@ proxy-groups:
 #远程规则集合声明
 rule-providers:
 
-  Netflix-rules:
-    behavior: ipcidr
-    interval: 86400
-    name: Netflix
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix_IP.yaml
-
-  Disney-rules:
-    behavior: classical
-    interval: 86400
-    name: Disney
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.yaml
-
-  Youtube-rules:
-    behavior: classical
-    interval: 86400
-    name: Youtube
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml
-
-  Spotify-rules:
-    behavior: classical
-    interval: 86400
-    name: Spotify
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml
-
-  Bilibili-rules:
-    behavior: classical
-    interval: 86400
-    name: Bilibili
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.yaml
-
-  Telegram-rules:
-    behavior: classical
-    interval: 86400
-    name: Telegram
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml
-
-  Twitter-rules:
-    behavior: classical
-    interval: 86400
-    name: Twitter
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml
-
-  Speedtest-rules:
-    behavior: classical
-    interval: 86400
-    name: Speedtest
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Speedtest/Speedtest.yaml
-
-  Apple-rules:
-    behavior: domain
-    interval: 86400
-    name: Apple
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple_Domain.txt
-
-  Google-rules:
-    behavior: classical
-    interval: 86400
-    name: Google
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml
-
-  Microsoft-rules:
-    behavior: classical
-    interval: 86400
-    name: Microsoft
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml
-
-  Instagram-rules:
-    behavior: classical
-    interval: 86400
-    name: Instagram
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Instagram/Instagram.yaml
-
-  Facebook-rules:
-    behavior: classical
-    interval: 86400
-    name: Facebook
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.yaml
-
-  Line-rules:
-    behavior: classical
-    interval: 86400
-    name: Line
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Line/Line.yaml
-
-  OneDrive-rules:
-    behavior: classical
-    interval: 86400
-    name: OneDrive
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.yaml
-
-  GitHub-rules:
-    behavior: classical
-    interval: 86400
-    name: GitHub
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml
-
-  GlobalMedia-rules:
-    behavior: domain
-    interval: 86400
-    name: GlobalMedia
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia_Domain.txt
-
-  GlobalProxy-rules:
-    behavior: domain
-    interval: 86400
-    name: GlobalProxy
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy_Domain.txt
-
   GlobleDirect-rules:
     behavior: classical
     interval: 86400
-    name: GlobleDirect
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml
 
   GlobleDirect-rules1:
     behavior: classical
     interval: 86400
-    name: GlobleDirect
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Download/Download.yaml
+
+  Bilibili-rules:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.yaml
+
+  Netflix-rules:
+    behavior: ipcidr
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix_IP.yaml
+
+  Disney-rules:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.yaml
+
+  Youtube-rules:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml
+
+  Spotify-rules:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml
+
+  Telegram-rules:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml
+
+  Twitter-rules:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml
+
+  Speedtest-rules:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Speedtest/Speedtest.yaml
+
+  Apple-rules:
+    behavior: domain-text
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple_Domain.txt
+
+  Google-rules:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml
+
+  OneDrive-rules:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.yaml
+
+  GitHub-rules:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml
+
+  Microsoft-rules:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml
+
+  Instagram-rules:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Instagram/Instagram.yaml
+
+  Facebook-rules:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.yaml
+
+  Line-rules:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Line/Line.yaml
+
+  GlobalMedia-rules:
+    behavior: domain-text
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia_Domain.txt
+
+  GlobalProxy-rules:
+    behavior: domain-text
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy_Domain.txt
 
   GlobleDirect-rules2:
     behavior: ipcidr
     interval: 86400
-    name: GlobleDirect
     url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
 
   GlobleDirect-rules3:
     behavior: classical
     interval: 86400
-    name: GlobleDirect
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMedia/ChinaMedia.yaml
 
   GlobleDirect-rules4:
-    behavior: domain
+    behavior: domain-text
     interval: 86400
-    name: GlobleDirect
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMaxNoIP/ChinaMaxNoIP_Domain.txt
 
   GlobleDirect-rules5:
-    behavior: domain
+    behavior: domain-text
     interval: 86400
-    name: GlobleDirect
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China_Domain.txt
 
   GlobleDirect-rules6:
     behavior: ipcidr
     interval: 86400
-    name: GlobleDirect
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaIPsBGP/ChinaIPsBGP_IP.yaml
 
   GlobleDirect-rules7:
     behavior: ipcidr
     interval: 86400
-    name: GlobleDirect
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaIPs/ChinaIPs_IP.yaml
 
 #分流规则引用
@@ -515,4 +477,4 @@ rules:
 - RULE-SET,GlobleDirect-rules6,DIRECT
 - RULE-SET,GlobleDirect-rules7,DIRECT
 - GEOIP,CN,DIRECT
-- MATCH,Final
+- MATCH,Final #分流规则匹配不到，漏网之鱼，走Final
