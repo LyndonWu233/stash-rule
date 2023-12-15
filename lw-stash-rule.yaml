@@ -9,9 +9,26 @@
 # 规则模式：rule（规则） / global（全局代理）/ direct（全局直连）
 mode: rule
 
+# HTTP 引擎相关
+http:
+  # 强制使用 HTTP 引擎处理 TCP 连接
+  # 捕获后的连接可以使用高级功能，例如重写和脚本
+  force-http-engine:
+    - '*:80'
+    - '*:4480' # BiliBili CDN
+    - '*:9102' # BiliBili CDN
+
 # 设置日志输出级别 (默认级别：silent，即不输出任何内容，以避免因日志内容过大而导致程序内存溢出）。
 # 5 个级别：silent / info / warning / error / debug。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
 log-level: silent
+
+# 支持通配符域名 (例如: *.clash.dev, *.foo.*.example.com )
+# 不使用通配符的域名优先级高于使用通配符的域名 (例如: foo.example.com > *.example.com > .example.com )
+# 注意: +.foo.com 的效果等同于 .foo.com 和 foo.com
+hosts:
+  '*.clash.dev': 127.0.0.1
+  '.dev': 127.0.0.1
+  'alpha.clash.dev': '::1'
 
 # DNS 服务器配置
 dns:
@@ -31,6 +48,11 @@ dns:
 
   # 跳过证书验证，解决部分兼容性问题 https://help.nextdns.io/t/g9hdkjz
   skip-cert-verify: true
+
+  # 对部分域名使用单独的 DNS 服务器
+  nameserver-policy:
+    'www.baidu.com': 114.114.114.114
+    '+.internal.crop.com': system
 
   # 在以下列表的域名将不会被解析为 fake ip，这些域名相关的解析请求将会返回它们真实的 IP 地址
   fake-ip-filter:
@@ -90,7 +112,8 @@ proxy-providers:
   
 #策略组
 proxy-groups:
-
+  # 代理的转发链, 在 proxies 中不应该包含 relay. 不支持 UDP.
+  # 流量: clash <-> http <-> vmess <-> ss1 <-> ss2 <-> 互联网
 - name: 节点选择
   type: select
   use:
